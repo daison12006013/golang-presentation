@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Go language, presented by Daison P. Cariño</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/dracula.css">
+
+		<style>
+			.text-sm {
+				font-size: 0.5em;
+			}
+			.text-md {
+				font-size: 0.8em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="https://miro.medium.com/max/1400/1*Ifpd_HtDiK9u6h68SZgNuA.png"
+				data-background-opacity="0.2">
+					<h1>Intro to GO "golang"</h1>
+					<p>by Daison P. Cariño</p>
+				</section>
+				<section>
+					<section>
+						<h2>Quote</h2>
+						<p>Failure is not the opposite of success, it is part of success.</p>
+					</section>
+					<section>
+						<h2>I "we" Developers</h2>
+						<p>If you can't solve it, just <strong>Google</strong> it!</p>
+					</section>
+				</section>
+				<section>
+					<h2>Created by Google Engrs. in 2007</h2>
+					<p>Because they dislike C++</p>
+				</section>
+				<section>
+					<p>Actually, they created it to improve their productivity in an era of multicore, networked machines and large codebases. The designers wanted to address criticism of other languages in use at Google, but keep their useful characteristics: <strong>Static typing</strong> and <strong>run-time efficiency (like C)</strong></p>
+				</section>
+				<section>
+					<p>The initial compiler was written in C, until they're able to create their own compiler written in Go itself.</p>
+				</section>
+				<section>
+					<h2>Well known opensource written in Go</h2>
+					<ul>
+						<li>Docker / Docker compose</li>
+						<li>Kubernetes</li>
+						<li>Terraform</li>
+						<li>Grafana</li>
+						<li>Vitess</li>
+						<li>CockroachDB</li>
+						<li>Turborepo</li>
+						<li>ESBuild</li>
+						<li>etcd, prometheus, raft (gRPC), adn many more</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Companies</h2>
+						<p>Google, Cloudflare, Uber, Grab, Foodpanda, Riot Games, Medium, Twitch, Dropbox, Soundcloud</p>
+					</section>
+					<section data-background-image="https://techcrunch.com/wp-content/uploads/2020/06/GettyImages-1149449083.jpg?w=730&crop=1"
+				data-background-opacity="0.1">
+						<h2>Google / Youtube</h2>
+						<p>Youtube's initial code was written in PHP, so they revamp everything and re-written in Python, however there are cases that the python can't do such as coroutines to process videos, so some part of it as per their case study, it was re-written to Go lang.</p>
+					</section>
+					<section data-background-image=""
+				data-background-opacity="0.2">
+						<h2>Cloudflare</h2>
+						<p>They're using it mainly under their product called "Railgun", where you can cache all your asset files such as js/css/html, it's like running your own cdn, and many more.</p>
+					</section>
+					<section data-background-image="https://images.spot.im/v1/production/m2xxxsmuixxvue7ljh8q"
+				data-background-opacity="0.1">
+						<h2>Uber</h2>
+						<p>Basing from their case study under their engineering blogs, they're using Go for path finding, race conditions and so on.</p>
+					</section>
+					<section data-background-image="https://www.techedt.com/wp-content/uploads/2017/04/Grab.png"
+				data-background-opacity="0.1">
+						<h2>Grab</h2>
+						<p>They're using Go for almost all of their services, such as their booking service, search indexing and multiple queries in goroutines in 1 run</p>
+					</section>
+					<section data-background-image="https://www.deliveryhero.com/wp-content/uploads/2021/08/foodpanda-Germany-expansion-1600x837.png"
+				data-background-opacity="0.1">
+						<h2>Foodpanda</h2>
+						<p>404 no engineering page</p>
+					</section>
+					<section data-background-image="https://esportsgen.com/wp-content/uploads/2021/09/Screenshot-2021-09-05-234413-800x400.jpg"
+				data-background-opacity="0.2">
+						<h2>Riot Games</h2>
+						<p>Known for their games such as League of Legends and Valorant, they're using Go to solve their deployment, purchase site and more.</p>
+					</section>
+				</section>
+				<section>
+					<h2>What's cool about Go?</h2>
+					<ul class="text-md">
+						<li>Goroutines and Channeling</li>
+						<li>Its easy to code, maintain, writing structs is like writing object instance, as if the single source of truth.</li>
+						<li>Either a functional or OOP dev can easily understand the code</li>
+						<li>Test cases' runs in parallel, you can write test cases along with the go lang file similar in node.</li>
+						<li>You can create your own gRPC</li>
+						<li>You can write your own WebAssembly</li>
+					</ul>
+				</section>
+				<section>
+					<h2>How fast can you learn Go?</h2>
+					<ul class="text-md">
+						<li>Depends, at least 2 weeks ~ 4 weeks</li>
+						<li>The most effective thing to do is to compare syntax from your known language agains't Go language, such as if/switch/for/errors/returns/data types</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Reference Links</h2>
+					<ul>
+						<li><a target="_blank" href="https://engineering.grab.com/domain-driven-development-in-golang">https://engineering.grab.com/domain-driven-development-in-golang</a></li>
+						<li><a target="_blank" href="https://technology.riotgames.com/news/leveraging-golang-game-development-and-operations">https://technology.riotgames.com/news/leveraging-golang-game-development-and-operations</a></li>
+						<li><a target="_blank" href="https://blog.iron.io/how-we-went-from-30-servers-to-2">https://blog.iron.io/how-we-went-from-30-servers-to-2</a></li>
+						<li><a target="_blank" href="https://blog.cloudflare.com/what-weve-been-doing-with-go/">https://blog.cloudflare.com/what-weve-been-doing-with-go/</a></li>
+					</ul>
+				</section>
+				<section>
+					<h1>Let's code, shall we?</h1>
+				</section>
+				<section>
+					<h2><a target="_blank" href="https://github.com/lucidfy/lucid">github.com/lucidfy/lucid</a></h2>
+					<p>For the last 4 months, I've been writing my own framework, inspired by laravel folder structure.</p>
+				</section>
+				<section>
+					<h2>Fundamentals of Go</h2>
+					<ul>
+						<li>Structs</li>
+						<li>Interface</li>
+						<li>Pointers</li>
+						<li>Error</li>
+						<li>Goroutine</li>
+						<li>Import Cycle & Context</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Hello World!</h3>
+					<pre>
+						<code class="language-go hljs" data-trim data-noescape data-line-numbers="|1|3-5">
+							package main
+
+							func main() {
+								fmt.Println("Hello World!")
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Folder and File Structure</h3>
+					<pre>
+						<code data-trim data-noescape data-line-numbers="|1|8|9-10|11-12|2-7">
+							my-go-project/
+							| app/
+							|		routes/
+							|			welcome.go
+							|			healthcheck.go
+							|		models/
+							|		middlewares/
+							| cli/
+							| 	console/
+							|			main.go
+							| 	web/
+							|			main.go
+							| go.mod
+							| go.sum
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Package / Namespace / Import</h3>
+					<pre>
+						<code class="language-go hljs" data-trim data-noescape data-line-numbers="|3|10|">
+							routes/
+								welcome.go
+										package routes
+
+										func Welcome() {
+												// ...
+										}
+
+								healthcheck.go
+										package routes
+
+										func HealthCheck() {
+												// ...
+										}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Calling routes package</h3>
+					<p class="text-sm">We need to setup our go module, its like npm/composer/pip</p>
+					<pre>
+						<code class="language-bash hljs" data-trim data-noescape data-line-numbers="|3|4-6">
+							my-go-project$:
+
+							 go mod init github.com/johndoe/my-go-project
+							 cat go.mod
+								> module github.com/johndoe/my-go-project
+								> ...
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Calling routes package</h3>
+					<p class="text-sm">Go back to <strong>/cli/web/main.go</strong></p>
+					<pre>
+						<code class="language-go hljs" data-trim data-noescape data-line-numbers="|6|9-11">
+							// cli/web/main.go
+							package main
+
+							import (
+								"fmt"
+								"github.com/johndoe/my-go-project/app/routes"
+							)
+
+							func main() {
+								fmt.Println(routes.Welcome())
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Encapsulation</h3>
+					<pre>
+						<code class="language-go hljs" data-trim data-noescape data-line-numbers="|3|7">
+							package whatever
+
+							func youCannotAccessThisMethodOutsideTheFile() {
+								// ...
+							}
+
+							func YouCanAccessThisAnywhere() {
+								// ...
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Returning Value</h3>
+					<pre>
+						<code class="language-go hljs" data-trim data-noescape data-line-numbers="|9|9-11|5|4-6|13">
+							package main
+
+							func main() {
+								fmt.Print(
+									getFullName(),
+								)
+							}
+
+							func getFullName() string {
+								return "John Doe"
+							}
+
+							> Output: John Doe
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h4>Struct</h4>
+					<section>
+						<pre>
+							<code class="language-go hljs" data-trim data-noescape data-line-numbers>
+								package main
+
+								type User struct {
+									FirstName string
+									LastName string
+									Age int8
+									BirthYear interface{}
+								}
+
+								func NewUser(fName string, lName string, age int8) *User {
+									return &User{
+										FirstName: fName,
+										LastName: lName,
+										Age: age,
+									}
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p class="text-sm">Under the main method, we create a user from User{}</p>
+						<pre>
+							<code class="language-go hljs" data-trim data-noescape data-line-numbers>
+								// ...
+								func main() {
+									user := NewUser("Daison", "Cariño", 31)
+									fmt.Println(user.FirstName, user.LastName, user.Age)
+								}
+								> Output: Daison Cariño 31
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p class="text-sm">How about using those struct's data as a method</p>
+						<pre>
+							<code class="language-go hljs" data-trim data-noescape data-line-numbers>
+								// ...
+								func (user User) getFullName() string {
+									return fmt.Sprintf("%s %s", user.FirstName, user.LastName)
+								}
+
+								func (user *User) getBirthYear() int8 {
+									if user.BirthYear != nil {
+										return user.BirthYear.(int8)
+									}
+									year, _, _ := time.Now().Date()
+									user.BirthYear = year - user.Age
+									return user.BirthYear
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p class="text-sm">Now go back to main method</p>
+						<pre>
+							<code class="language-go hljs" data-trim data-noescape data-line-numbers>
+								// ...
+								func main() {
+									user := NewUser("Daison", "Cariño", 31)
+									fmt.Println(user.getFullName(), user.Age, user.getBirthYear())
+								}
+								> Output: Daison Cariño 31 1991
+							</code>
+						</pre>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
